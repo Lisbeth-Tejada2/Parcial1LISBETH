@@ -6,7 +6,7 @@ namespace Parcial1LISBETH.Models
     {
         [Key]
         public int PrestamoId { get; set; }
-        public DateTime Fecha { get; set; }
+        public DateTime Fecha { get; set; } = DateTime.Now;
 
         [Required(ErrorMessage = "Lo sentimos! El concepto es obligatorio")]
         public string Concepto { get; set; }
