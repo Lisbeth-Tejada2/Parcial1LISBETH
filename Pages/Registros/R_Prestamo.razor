@@ -33,9 +33,10 @@
 
                     <div class="mb-3">
                         <label class="form-label" for="Monto">Monto:</label>
-                        <InputNumber @bind-Value="prestamo.Balance" class="form-control" />
-                        <ValidationMessage For="@(() => prestamo.Balance)" />
+                        <InputNumber @bind-Value="prestamo.Monto" class="form-control" />
+                        <ValidationMessage For="@(() => prestamo.Monto)" />
                     </div>
+
 
                     <div class="mb-3">
                         <label class="form-label" for="Concepto">Concepto:</label>
