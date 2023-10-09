@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.EntityFrameworkCore;
+using Parcial1LISBETH.BLL;
 using Parcial1LISBETH.DAL;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +17,8 @@ var ConStr = builder.Configuration.GetConnectionString("ConStr");
 builder.Services.AddDbContext<Contexto>(options => options.UseSqlite(ConStr));
 
 
+//Inyectando la BLL
+builder.Services.AddScoped<PrestamoBLL>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
